@@ -1,0 +1,4 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'NISER-HBIM: Course'
+theme = 'hugo-book'
