@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduction on NISER-HBIM: Course</title>
+    <link>http://example.org/</link>
+    <description>Recent content in Introduction on NISER-HBIM: Course</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction</title>
+      <link>http://example.org/docs/introduction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/introduction/</guid>
+      <description>Introduction #  There are three important questions that we will answer in this course about HBIM,
+ What is it? Why do I care? How do I make one?  </description>
+    </item>
+    
+    <item>
+      <title>Database Design</title>
+      <link>http://example.org/docs/database/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/database/</guid>
+      <description>Setting up the database #  There are many robust database management systems available like MySQL, MariaDB, Oracle. But since we are only going to use open source tools, we will use PostgreSQL. PostgreSQL is based on relational database model and the create, read, update and delete (CRUD) operations are done using the Structured Query Language (SQL).</description>
+    </item>
+    
+  </channel>
+</rss>
