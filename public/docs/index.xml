@@ -22,7 +22,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://example.org/docs/database/</guid>
-      <description>Setting up the database #  There are many robust database management systems available like MySQL, MariaDB, Oracle. But since we are only going to use open source tools, we will use PostgreSQL. PostgreSQL is based on relational database model and the create, read, update and delete (CRUD) operations are done using the Structured Query Language (SQL).</description>
+      <description>Setting up the database #  There are many robust database management systems available like MySQL, MariaDB, Oracle. But since we are only going to use open source tools, we will use PostgreSQL. PostgreSQL is based on relational database model and the create, read, update and delete (CRUD) operations are done using the Structured Query Language (SQL).
+Getting the database #  The
+Database design #  </description>
     </item>
     
   </channel>
