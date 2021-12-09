@@ -30,6 +30,8 @@ GUI interfaces for Windows, Mac, Linux as well as the web, with both proprietary
 and open-source license. In short, there are a lot of choices for the client, and
 the official Postgres Wiki has a list, which can be found [here](https://wiki.postgresql.org/wiki/PostgreSQL_Clients).
 
+In this text, we will be using the Linux operating system.
+
 ## Setting up the database server
 Once the installation is complete, the server can be invoked by simply issuing the
 command `postgres`. However, the server will most likely fail to start because it
@@ -38,11 +40,42 @@ doesn't come pre-configured. The official Postgres documentation, which can be f
 the Postgres server. We will not go into details, but for the sake of completeness
 we will provide a minimal working example.
 
+The Postgres server must run as a different user, since the server can be exposed
+to the public and as a different user the postgres server has no access to the user
+files. Some installation of postgres already creates a new user while some of them
+do not. To create a new user we can issue the command,
+
+```
+useradd postgres -d /var/lib/postgresql
+```
+where the `-d` flag denotes the home directory of the postgres user.
+
+The server stores the data in a directory and we have to create the `data` directory
+and init the database as the user postgres.
+```
+su - postgres
+cd ~
+mkdir data
+initdb -D /var/lib/postgresql/data
+```
+For Ubuntu users, the recommended way of switiching users is `sudo su postgres`.
+Please substitute if you are using Ubuntu.
+The server daemon can now start by issuing the following command (as the `postgres` user).
+```
+postgres -D /var/lib/postgresql/data
+```
+For the HBIM, we will create a new database (again, as the user `postgres` user).
+```
+createdb hbim
+```
 ## Setting up the client
 Among the myriad of clients available, we will use the official `pgsql` client that
 is maintained by the Postgres developers. It is free, open source like the Postgres
-server and it is a command-line interface. The client can be invoked by issuing
-`pgsql` and logging in.
+server and it is a command-line interface. The client can be invoked by,
+```
+psql
+```
+If you are inclined to use other client, please see their documentation.
 
 # Database design
 There are 7 dimensions of HBIM and we want to store all the data so that they can

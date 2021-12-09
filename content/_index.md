@@ -8,7 +8,7 @@ bookToc: false
 
 National Institute of Science Education and Research
 
-Bhubaneswar, India - 754050
+Bhubaneswar, India - 752050
 
 ## About
 This is the official website for the course on **Heritage Building Information
@@ -24,8 +24,8 @@ The supplemental videos for some section of the course can be found [here]().
 You can obtain the dataset [here]().
 
 ## Instructors
-- Dr. Subhankar Mishra
 - Annada Behera
+- Dr. Subhankar Mishra
 
 ## Cite
 If may use the following to cite this course,

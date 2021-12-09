@@ -64,6 +64,12 @@ The database is now ready to be able to add new contents, which we do in the nex
 section.
 
 ### Setting up tesseract
+Tesseract can be used standalone. The package is available in most Linux distros
+and Mac. It can installed by the package manager, (for example in Mac)
+
+```
+brew install tesseract
+```
 
 ### Populating the database with transcript
 
