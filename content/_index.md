@@ -21,7 +21,7 @@ The course materials are present [here]().
 
 The supplemental videos for some section of the course can be found [here]().
 
-You can obtain the dataset [here]().
+You can obtain the dataset [here](/data/intro).
 
 ## Instructors
 - Annada Behera
