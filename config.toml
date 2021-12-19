@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://www.niser.ac.in/~smishra/project/hbim/hbimcourse/public/'
 languageCode = 'en-us'
 title = 'NISER-HBIM: Course'
 theme = ['hugo-video', 'hugo-book']

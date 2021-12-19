@@ -6,6 +6,8 @@ bookToc: false
 
 # **Heritage Building Information Modeling: A course**
 
+[Subhankar Mishra LAB](https://www.niser.ac.in/~smishra/) | [Project Webpage](https://www.niser.ac.in/~smishra/project/hbim/index.html)
+
 National Institute of Science Education and Research
 
 Bhubaneswar, India - 752050
