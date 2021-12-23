@@ -41,8 +41,7 @@ The technical paper for this entire project can be found [here]().
 
 ### Model
 **Please note that for rendering in the browser, the preview is low polygon mesh.
-For a preview with texture, please click [here](). See next section for the
-full-scale model.**
+See next section for the full-scale model.**
 
 ## Data access
 
