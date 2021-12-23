@@ -9,6 +9,7 @@ weight: 1
 # bookSearchExclude: false
 ---
 
+# Photogrammetry
 Photogrammetry is the process of obtaining *reliable information about physical
 objects and the environment through processes of recording, measuring and interpreting
 photographic images and patterns of recorded radiant electromagnetic energy and
@@ -28,53 +29,76 @@ operate a unmanned aerial vehicle (UAV) such as a drone. In the course further, 
 and photogrammetry will be used interchangeably.
 
 The basic principle behind photogrammetry is the geomtrical reconstruction of the
-path of rays from the target to the camera sensor at the moment of exposure. The
-reconstruction is based on the 
-
-## Types of photogrammetric photographs
-In this section, we will discuss the types of images captured, the challenges facing
-the capturing and how it can affect the reconstructed models. 
-### Vertical photographs
-The images that are taken are categorized as vertical photography if the rays hitting
-the sensor is perpendicular to the optical plane of the image, i.e, perpendicular
-to the ground. For digital images, the ground
-sample distance (GSD) determines the spatial resolution, i.e, the smallest visible
-detail in the photograph. As the height of the UAV increases, the scale of the image
-is halved and for digital images, the GSD also decreases.
-
-The vertical photographs capture the parallel geometry of the target. In practice,
-most aerial photograph deviate from verical photographs because of the following
-reasons. (a) the ground may not be flat i.e, the elevation of the ground changes,
-(b) the photograph may not be completely vertical and (c) the projection is imperfect.
-
-For higher elevations, the target becomes nearer to the sensor and hence the scale
-of the image changes and the relif displacement increases with distance to the center 
-of the image. It is also inversely proportional to the height, focal length and
-the aperature of the sensor. The reason being that the rays are comparatively less
-inclined.
-
-Therefore, images for monoscoping mapping should be taken such that it reduces the
-distortion due to relif displacement, i.e, the images is best taken using a telephoto
-lens from a greater height. However, for reconstruction purposes and stereoscopic
-viewing, and most BIM applications, the image should have higher focal length, wider
-aperature, taken from a lower height.
-### Tilted photographs
-
-
-### Interior photographs
-### Exterior photographs
+path of rays from the target to the camera sensor at the moment of exposure.
 
 ## Photogrammetry pipline
+In this section, we will describe how a set of images are converted to a 3D model
+and go through the various steps involved, such that we can have a clear idea on
+how we can tweak the parameters and other factors so that the process of data collection
+and processing can be optimized for better final model. The goal is not to go into
+the detail mathematics behind the process, nor the details of the algorithm or
+it's implementation.
+
 ### Natural feature extraction
-### Image matching
-### Features matching
-### Structure from motion
-### Depth map estimation
+The natural feature extraction is to find a group of pixels that are not changing
+too much for different viewpoints. One of the well known method for doing so is called,
+**Scale-invariant feature transform** or the SIFT algorithm.
+
+For a given image, a set of progressively downscaled images are first created
+and then points with locally maximum Laplacian are identified. These maxima are
+the points of interest or features. The Laplacian is a measure of how the color
+value of the current position is different than the values at its neighboring
+points. The square patch of pixels with the center at the maxima, called
+keypoints.
+
+The number of
+patches are sometimes reduced to a reasonable number if they are too high. 
+Each extracted discriminative patch is then stored along with it's descriptor
+based on the gradients around the maxima.
+
+SIFT extracts discriminative patches from first image and compares them to the
+discriminative patches in the second image, irrespective of the rotation,
+translation or scaling. These patches and their transformation gives clues for
+the changing of camera viewpoints duing photographing.
+### Matching
+In this part of the pipeline, the aim to find the areas in the scene that are
+similar in different images. That can be done with the help of descriptors of
+keypoints. By converting the entire image into a compact image descriptors, we
+can compare two images or parts of it by simply computing the norm between them
+instead of comparing every feature individually that may take a lot of
+computation power.
+
+The features are then all matched image between candidate image pairs, based on
+their image descriptors.
+
+### Structure from motion and depth map
+The Structure from Motion algorithm calculates the camera positions of all the
+images. This is a very popular algorithm and is extensively documented and we
+won't go into details of the it.
+Once the camera positions are computed, the depth value of each pixel can be
+calculated using many approach such as, Block Matching, Semi-Global Matching,
+ADCensus, etc. 
+For the depth map of independent images (which can be computed in parallel), a
+filtering step is applied to ensure consistency between multiple cameras.
 ### Meshing
+The structure from motion and depth maps computed is used to create a dense
+geomtrical representation from the scene. The depth map is used to create a
+octree of the depth values and then the process of tetrahedralization is
+performed to get a interconnected mesh. The mesh is the separated using a
+min-cut max-flow algorithm.
+
+A Laplacian is applied to remove rogue points in the mesh and unnecessary
+vertices.
+
 ### Texturing
-### Localization
+The generated mesh generally doesn't have a UV associated with it. The UV are
+computed automatically into regions of triangles based on the original
+triangulation of the mesh.
 
-## Libraries
+For every triangle, many candidate images are considered that are visible from
+the given camera angle such that they are looking at the surface perpendicularly,
+The color is then averaged over each triangle and stored in the texture map.
 
-#### Citation
-[1] *James S. Aber, Irene Marzolff, Johannes B. Ries,* __Chapter 3 - Photogrammetry, Small-Format Aerial Photography__ Elsevier, 2010, Pages 23-39, ISBN 9780444532602.
+We have glossed along the pipeline for the entire photogrammetry process. A
+basic overview of the process can be helpful in case we want to fine tune our
+photography to produce better models.
