@@ -8,18 +8,18 @@ weight: 1
 # bookComments: false
 # bookSearchExclude: false
 ---
-### Photogrammetry
+## Photogrammetry
 - The flight plan for unmanned aerial vehicle is given below.
 - The drone was flying at about 80 m above the ground.
 ![drone trajectory](drone-trajectory.png)
-- Photogrammetry is based on the overlap of the images. The same features atleast has to be detected on 3 images.
+- Photogrammetry is based on the overlap of the images. The same features at least has to be detected on 3 images.
 - The images are then stitched. First step is **densification** and **key-point detection**.
 - Once we have enough images of the overlapping images, the images are then calibrated and the camera position is estimated.
 - The next step is to manually provide control points.
-- The base-station was a RTK-based GNSS system (realtime kinematic correction).
+- The base-station was a RTK-based GNSS system (real time kinematic correction).
 ![drone base station](base-station.jpg)
 - The drone is the rover and the station is the base. The remote, the rover and the base are in communication all the time.
-- This helps in the realtime calculation of the geolocation and correction of the co-ordinates.
+- This helps in the real time calculation of the geolocation and correction of the co-ordinates.
 - The geolocation device is on the craft/rover as well as on the base station.
 - For civilian usage, there is an error of 5 to 8 meters in the geo co-ordinates.
 - It was connected to a CORS network (continuously operating reference station) and
@@ -27,18 +27,31 @@ to a VRS (virtual reference station).
 - The sensor was 1” CMOS 20 mega-pixel camera with 24mm lens and 84 deg field of view.
 - The unmanned aerial vehicle had a automatic pitch-roll-yaw stabilization.
 - The UAV flight had a flight altitude of 80m, flying at 7 m/hr, with 75% overlap
-and 80% sidelap.
+and 80% side-lap.
 - A total of 2,334 photographs were taken.
 - The control points are added to the images manually and better control points
 give better measurements.
-- The were occuluded region during overall coarse scan. To fix that flat vertical
+- The were occluded region during overall coarse scan. To fix that flat vertical
 scan profile photograph was taken with close by camera.
 - The drone makes sure that is no motion blur while taking the photograph, by making sure the shutter speed, drone movement is condemn with each other.
-- Since the photographs are taken in raw image format, all the parameters like gamma, ISO, color can all be corrected except the shutter speed.
-- All this correction is all manual. There are some batch process, though, like tone, temperature and color balance so that there is no artefacts.
+- Since the photographs are taken in raw image format, all the parameters like gamma, color can all be corrected except the shutter speed.
+- All this correction is all manual. There are some batch process, though, like tone, temperature and color balance so that there is no artifacts.
 - Most of the batch processing is for tonal balancing. Tone balance can be done in batch process, but not gamma.
 
-### Terresterial Laser Scan
+### Rajarani camera details
+
+| Camera parameters     | Value                       |
+| --------------------- | --------------------------- |
+| Number of photographs | 2334                        |
+| Shutter speed         | 120                         |
+| ISO                   | 100                         |
+| Aperture              | f/5.0                       |
+| Focal length          | 24.0 (35mm film) 8.8 (lens) |
+| Metering method       | Average                     |
+
+
+
+## Terrestrial Laser Scan
 
 - The scanner was a FARO Focus M70 scanner.
 ![scanner](scanner.png)

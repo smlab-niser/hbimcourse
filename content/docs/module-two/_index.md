@@ -19,6 +19,6 @@ that that adding new data and features are as easy as possible.
 and processed data, and
 - finally discuss data migration in face of a potentially new design.
 
-With this we will also discuss the pitfals and arguments for doing the things the
+With this we will also discuss the pitfalls and arguments for doing the things the
 way have done and how we approach the potential problems with the design we have
 at hand.

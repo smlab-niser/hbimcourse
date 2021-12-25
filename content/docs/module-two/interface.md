@@ -14,7 +14,7 @@ weight: 1
 We will use the Python programming language to build the interface for the HBIM.
 Python programming language can be downloaded from the official site and the installation
 instruction differs from different operating systems. For Linux and Mac OS X, the
-recommeded way of installing the programming langauage is the default package manager.
+recommended way of installing the programming language is the default package manager.
 
 However, there are independent package manager like
 [Miniconda](https://conda.io/miniconda.html) that help install different versions
@@ -61,7 +61,7 @@ for row in cur:
 ```
 Since a `SELECT` statement in SQL usually returns tuples of the relation, the cursor
 executes the query and stores as a Python list iterator which can be run through
-a foreach loop to get individual tuples. And the tuple is a string constant,
+a for-each loop to get individual tuples. And the tuple is a string constant,
 ```python
 ('Hello World!',)
 ```

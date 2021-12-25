@@ -11,19 +11,19 @@ weight: 1
 
 The way the HBIM is setup, one may add potentially new data to the HBIM and improve
 on it. In this section, we will go through two similar exercises to improve the HBIM
-and it's quering capabilities.
+and it's querying capabilities.
 
 ## Example I: Transcripts of the documents
 In this example, we will directly retrieve the data from the database and modify
 it.
 
 The HBIM database contains the documents in various format. However, searching
-through the documents is not possibe since they are not computer readable. There
+through the documents is not possible since they are not computer readable. There
 are capable OCR programs that can read the documents with higher degree of accuracy.
 
 In this example, we will use Tesseract to OCR. It is a open source program based
 on LSTM neural network. It is based on `libtesseract` written in C++. However, there
-are frontend for many programming language like Python. We may use any tooling or
+are front-end for many programming language like Python. We may use any tooling or
 programming language to interact the database, irrespective of what the API is written
 in.
 
@@ -57,7 +57,7 @@ CREATE TABLE transcripts (
 );
 ```
 
-where the `texts` contains the transcripted text, `doc_id` is a foreign key to the
+where the `texts` contains the transcript-ed text, `doc_id` is a foreign key to the
 `documents` relation and the `page` contains the page number in the document.
 
 The database is now ready to be able to add new contents, which we do in the next

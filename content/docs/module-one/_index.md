@@ -16,7 +16,7 @@ The two most common techniques are terrestrial laser scanning, TLS and photogram
 using unmanned aerial vehicle UAV.
 
 The other dimensions require data collection from other sources, such as organizations
-like Archeological Survery of India, private parties and stakeholders in the subject
+like Archaeological Survey of India, private parties and stakeholders in the subject
 cultural heritage. We go brief into such data collection.
 
 At the end, we will discuss how the above was applied while collecting the data
@@ -26,7 +26,7 @@ for Rajarani HBIM. In summary, the module will cover the following,
 - Photogrammetry using unmanned aerial vehicle (UAV)
 - Other data collection sources
 - Proprietary and open source software for data processing
-- Case study of the abovr for Rajarani.
+- Case study of the above for Rajarani.
 
 Along with legal, technical and non-technical challenges for the above mentioned
 parts of this module.

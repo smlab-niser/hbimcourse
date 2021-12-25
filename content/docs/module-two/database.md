@@ -23,7 +23,7 @@ The official binary releases and source code can be found on at
 installing the database software on Windows and Mac OS X. For Linux-based operating
 systems, the package manager should be preferred.
 
-Postgres uses a client-server model, unlike say Sqlite where the main program provides
+Postgres uses a client-server model, unlike say SQLite where the main program provides
 both the user interface and the database management. The server for Postgres is program
 called `postgres`. There are many clients for Postgres having both command-line and
 GUI interfaces for Windows, Mac, Linux as well as the web, with both proprietary
@@ -58,7 +58,7 @@ cd ~
 mkdir data
 initdb -D /var/lib/postgresql/data
 ```
-For Ubuntu users, the recommended way of switiching users is `sudo su postgres`.
+For Ubuntu users, the recommended way of switching users is `sudo su postgres`.
 Please substitute if you are using Ubuntu.
 The server daemon can now start by issuing the following command (as the `postgres` user).
 ```
@@ -162,6 +162,6 @@ CREATE TABLE documents(
 );
 ```
 Most of the filetypes have 3 characters extensions, but some have 4 or even 5 characters
-extensions. Therefore to accomodate it, and future filetypes, we have allocated 8
+extensions. Therefore to accommodate it, and future filetypes, we have allocated 8
 characters in the database.
 

@@ -22,14 +22,14 @@ many detectable feature on the subject while not detecting the features in the b
 
 Although the _automatic_ settings on the digital cameras is good enough for taking
 photographs for everyday situations, they are not good enough for photogrammetric
-reconstructions. This section describes what settings to keep in mind while photograhing
+reconstructions. This section describes what settings to keep in mind while photographing
 the target. The three most important camera settings shutter speed, aperture and
 the ISO. In photography, this is known as the **exposure triangle**.
 
 ## Camera shutter speed 
 The **shutter speed** is the time the camera lens is exposed to the scene. The lower
 the shutter speed, the longer the lens is exposed to the scene and vice-versa. Allowing
-the lens to get exposed for a longer time, produces brigher images since more light
+the lens to get exposed for a longer time, produces brighter images since more light
 can enter the sensor. However, if the target or the camera is moving and the shutter
 speed is low, then target or any other object in the field of view can expose more
 than one part in the sensor and hence the images may come out blurry.
@@ -57,16 +57,16 @@ photograph was taken.
 
 ## Camera aperture
 The aperture is the size of the _hole_ that exposes the sensor. It is donut-shaped
-ring that can expand and contract. The **f-numer** or **f-stop** controls how big
-of a _hole_ you want on your aperture. The f-number is generally reprensented as
+ring that can expand and contract. The **f-number** or **f-stop** controls how big
+of a _hole_ you want on your aperture. The f-number is generally represented as
 F/#. A higher aperture like F/4 or F/2 open the aperture more widely and hence more
 light can enter the sensor, while a lower aperture like F/32 or F/64 allows less
 light. However, the most important property that the f-number changes is the **depth
 of field**.
 
-The depth of field, controls the focus and blurryness of the background. A higher
+The depth of field, controls the focus and blurriness of the background. A higher
 depth of field brings out more details in the background and a lower depth of field
-blurries the background and makes the subject of the photographs to stand out more.
+blurriest the background and makes the subject of the photographs to stand out more.
 For our case of  photographing cultural heritage sites, we are more interested in
 the subject rather than the objects in the background. And the photogrammetric
 techniques that we employ uses feature detection to track the various parts of the
@@ -80,9 +80,9 @@ for taking the photographs.
 ## Camera ISO
 The ISO controls the sensitivity of the sensor. It is always recommended **to keep
 the ISO as low as possible**. A lower ISO is always better for increasing the dynamic
-range, and color accuracy while decreasing the chromatic abberations. A lower ISO
+range, and color accuracy while decreasing the chromatic aberrations. A lower ISO
 also makes sensor less sensitive and hence reduces
-the noise and grainyness. This is important since a less grainy image makes it less
+the noise and graininess. This is important since a less grainy image makes it less
 likely for the feature detection algorithm to pick up noise. However, a less sensitive
 sensor needs more exposure to detect less bright areas. So, it all comes down to
 the balance between the ISO, shutter speed and the aperture.
@@ -92,7 +92,7 @@ The photogrammetric algorithm does not care if the entire subject is not visible
 in every single shot. Therefore, **close up pictures that can cover many detectable
 features** are desirable. However, for the algorithm to know the entire model, it
 is also advisable to take some pictures with the entire subject in frame as well
-as making sure that for two images, there is atleast a 70% overlap of the detectable
+as making sure that for two images, there is at least a 70% overlap of the detectable
 features.
 
 ## Subject material
@@ -106,15 +106,15 @@ parts.
 
 ## Subject masking
 Isolating a cultural heritage site from it's background is not possible and if the
-subject is big enough, then the depth of field may not help in isolation and blurrying
+subject is big enough, then the depth of field may not help in isolation and blurring
 the background. So, the image has to be masked to only keep the subject and remove
 any background. While the background many not be very useful, features detected in
 the background will only consume computing power and space.
 
 ## Number of views
 For a cultural heritage model, it is important to take pictures of all possible
-angles and elevations as well as occuluded regions so that they can be modeled. If
-a part of the structure is not present in atleast 3 images and then the triangulation
+angles and elevations as well as occluded regions so that they can be modeled. If
+a part of the structure is not present in at least 3 images and then the triangulation
 fails and the final output model may not contain the part. While this can be filled
 automatically in post-processing, the result may not be accurate.
 
@@ -122,13 +122,13 @@ automatically in post-processing, the result may not be accurate.
 In summary, the following things needs to be considered. 
 - Set the camera to use higher shutter speed, lower depth of field and lower ISO.
 - Close up pictures with more detectable features.
-- A 60-70% overlap of the detectable feature in atleast two images.
+- A 60-70% overlap of the detectable feature in at least two images.
 - Avoid shiny, specular and transparent subjects.
 - Avoid blurry images.
 - Avoid subjects with fine and many lose parts like hair, grids and nets.
 - Mask the subject from the background
-- Rotate and zoom the camera such that the subject covers atleast 70% of the image.
-- Use different elevations for covering occuluded and shadow areas like rooftops.
+- Rotate and zoom the camera such that the subject covers at least 70% of the image.
+- Use different elevations for covering occluded and shadow areas like rooftops.
 - A larger number of photographs never hurts, except for the requirement of computing
 power.
 
